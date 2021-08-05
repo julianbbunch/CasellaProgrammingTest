@@ -1,0 +1,24 @@
+{
+  "name": "CasellaProgrammingTest",
+  "version": "1.0.0",
+  "description": "Casella Programming Test",
+  "main": "req-server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianbbunch/CasellaProgrammingTest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julianbbunch/CasellaProgrammingTest/issues"
+  },
+  "homepage": "https://github.com/julianbbunch/CasellaProgrammingTest#readme"
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <script>
+    function myFunction() {
+        var url = "http://julianbunch.com:3000/";
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", url);
+        xhr.setRequestHeader("Accept", "text/plain");
+        xhr.setRequestHeader("Content-Type", "text/plain");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                console.log(xhr.status);
+                console.log(xhr.responseText);
+                var responseField = document.getElementById("response");
+                responseField.value = JSON.stringify(JSON.parse(xhr.responseText), null, 4);
+            }};
+
+        xhr.send(document.getElementById("text").value);
+    }
+    </script>
+
+</head>
+<body>
+    <div class="content">
+        <div class="row">
+            <div class="col-6">
+                <h3>Input text:</h3>
+                <textarea type="text" id="text" placeholder="Text to be analyzed:"></textarea><br>
+                <button onclick="myFunction()">Submit</button>
+            </div>
+            <div class="col-6">
+                <h3>JSON:</h3>
+                <textarea id="response"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
